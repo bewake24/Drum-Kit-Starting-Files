@@ -3,7 +3,7 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 }
 
 function handleClick() {
-  var buttonInnerHTML = this.innerHTML; //"this" keyword refers the objects here for i=2, this keyword have selected 's'.
+  var buttonInnerHTML = this.innerHTML; 
   makeSound(buttonInnerHTML);
   buttonAnimation(buttonInnerHTML);
 }
@@ -15,19 +15,10 @@ document.addEventListener("keydown", function(event) {
 
 function makeSound(key) {
   switch (key) {
-    case "w": // here w is the text selected by this.innnerHTML.
+    case "w":
       var tom1 = new Audio("sounds/tom-1.mp3");
       tom1.play();
       break;
-
-      /* Here "Audio" is a constructor function but it's predefined, and it will be defined something like this
-         function Audio (filelocation) {
-           this.filelocation = filelocation;
-           ........
-           ...........
-           ...............
-          }
-      */
 
     case "a":
       var tom2 = new Audio("sounds/tom-2.mp3");
